@@ -1,0 +1,23 @@
+{
+    "builds": [
+      {
+        "src": "index.js",
+        "use": "@vercel/node"
+      },
+      {
+        "src": "build/**",
+        "use": "@vercel/static"
+      },
+      {
+        "functions": {
+          "api/*": {
+          "maxDuration": 30
+          }
+        }
+    }
+    ],
+
+    
+  
+    "rewrites": [{ "source": "/(.*)", "destination": "index.js" }]
+  }
