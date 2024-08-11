@@ -15,9 +15,6 @@ server.use(express.json());
 server.use('/news',newsRouter.router);
 
 
-
-
-
 main().catch((err) => console.log(err));
 async function main() {
     await mongoose.connect(process.env.MONGODB_URL);
